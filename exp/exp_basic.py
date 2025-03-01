@@ -46,6 +46,7 @@ class Exp_Basic(object):
             self.model_dict['Mamba'] = Mamba
 
         self.device = self._acquire_device()
+        print(f"Device acquired: {self.device}")  # Debug，看看返回的是什么
         self.model = self._build_model().to(self.device)
 
     def _build_model(self):
@@ -64,6 +65,7 @@ class Exp_Basic(object):
         else:
             device = torch.device('cpu')
             print('Use CPU')
+        print(f"torch.cuda.is_available(): {torch.cuda.is_available()}")
         return device
 
     def _get_data(self):
