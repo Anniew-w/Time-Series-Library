@@ -1,6 +1,7 @@
 import numpy as np
 import matplotlib.pyplot as plt
 import os
+import pandas as pd
 
 # 确保结果文件存在
 pred_path = 'results/long_term_forecast_DLinear/pred.npy'
@@ -13,15 +14,19 @@ if not os.path.exists(pred_path) or not os.path.exists(true_path):
 pred = np.load(pred_path)
 true = np.load(true_path)
 
-# 只画第一条样本
+# 加载 CSV 文件来提取时间戳（假设和 true.npy 是对齐的）
+df = pd.read_csv("data/AAPL/AAPL.csv")
+dates = pd.to_datetime(df['date'])[-len(true[0]):]  # 只取最后一段预测区间
+
+# 绘图
 plt.figure(figsize=(10, 5))
-plt.plot(true[0], label='True Value')
-plt.plot(pred[0], label='Prediction')
+plt.plot(dates, true[0], label='True Value')
+plt.plot(dates, pred[0], label='Prediction')
 plt.title('Prediction vs True Value')
-plt.xlabel('Time')
+plt.xlabel('Date')
 plt.ylabel('Value')
+plt.xticks(rotation=45)
 plt.legend()
-plt.grid(True)
 plt.tight_layout()
 plt.savefig('results/plot.png')
 plt.show()
