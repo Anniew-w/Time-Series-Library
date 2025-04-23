@@ -6,8 +6,8 @@ Dlinear:
 		--model_id Dlinear \
 		--model DLinear \
 		--data custom \
-		--root_path ./data/AAPL/ \
-		--data_path AAPL.csv \
+		--root_path ./data/TSLA/ \
+		--data_path TSLA.csv \
 		--features S \
 		--target Close \
 		--seq_len 96 \
@@ -20,7 +20,7 @@ Dlinear:
 		--dec_in 1 \
 		--c_out 1 \
 		--d_model 64 \
-		--des 'Exp_DLinear_AAPL' \
+		--des 'Exp_DLinear_TSLA' \
 		--itr 1 \
 		--gpu 0 \
 		--gpu_type cuda
