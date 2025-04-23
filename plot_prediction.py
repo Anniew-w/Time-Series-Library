@@ -1,0 +1,27 @@
+import numpy as np
+import matplotlib.pyplot as plt
+import os
+
+# 确保结果文件存在
+pred_path = 'results/pred.npy'
+true_path = 'results/true.npy'
+
+if not os.path.exists(pred_path) or not os.path.exists(true_path):
+    raise FileNotFoundError("预测文件或真实值文件不存在，请先运行模型生成结果。")
+
+# 加载预测和真实值
+pred = np.load(pred_path)
+true = np.load(true_path)
+
+# 只画第一条样本
+plt.figure(figsize=(10, 5))
+plt.plot(true[0], label='True Value')
+plt.plot(pred[0], label='Prediction')
+plt.title('Prediction vs True Value')
+plt.xlabel('Time')
+plt.ylabel('Value')
+plt.legend()
+plt.grid(True)
+plt.tight_layout()
+plt.savefig('results/plot.png')
+plt.show()
