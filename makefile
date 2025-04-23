@@ -50,8 +50,11 @@ Transformer:
 		--gpu 0 \
 		--gpu_type cuda
 
-plot:
-	python plot_prediction.py
+plot_aapl:
+	python plot_AAPL.py
+
+plot_tsla:
+	python plot_TSLA.py
 
 # 清理结果
 clean:
