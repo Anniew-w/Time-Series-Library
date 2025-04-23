@@ -31,8 +31,8 @@ Transformer:
 		--model_id Transformer \
 		--model Transformer \
 		--data custom \
-		--root_path ./data/TSLA/ \
-		--data_path TSLA.csv \
+		--root_path ./data/AAPL/ \
+		--data_path AAPL.csv \
 		--features S \
 		--target Close \
 		--seq_len 96 \
@@ -45,7 +45,7 @@ Transformer:
 		--dec_in 1 \
 		--c_out 1 \
 		--d_model 64 \
-		--des 'Exp_Transformer_TSLA' \
+		--des 'Exp_Transformer_AAPL' \
 		--itr 1 \
 		--gpu 0 \
 		--gpu_type cuda
