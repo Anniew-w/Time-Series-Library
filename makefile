@@ -1,4 +1,3 @@
-all: Dlinear plot
 # 训练模型
 Dlinear:
 	python run.py \
@@ -52,7 +51,7 @@ Transformer:
 		--gpu_type cuda
 
 plot:
-	python utils/plot_prediction.py
+	python plot_prediction.py
 
 # 清理结果
 clean:
