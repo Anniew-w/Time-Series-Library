@@ -4,8 +4,8 @@ import os
 import pandas as pd
 
 # 确保结果文件存在
-pred_path = 'results/Dlinear-AAPL/pred.npy'
-true_path = 'results/Dlinear-AAPL/true.npy'
+pred_path = 'results/Dlinear-TSLA/pred.npy'
+true_path = 'results/Dlinear-TSLA/true.npy'
 
 if not os.path.exists(pred_path) or not os.path.exists(true_path):
     raise FileNotFoundError("预测文件或真实值文件不存在，请先运行模型生成结果。")
@@ -15,14 +15,14 @@ pred = np.load(pred_path)
 true = np.load(true_path)
 
 # 加载 CSV 文件来提取时间戳（假设和 true.npy 是对齐的）
-df = pd.read_csv("data/AAPL/AAPL.csv")
+df = pd.read_csv("data/TSLA/TSLA.csv")
 dates = pd.to_datetime(df['date'])[-len(true[0]):]  # 只取最后一段预测区间
 
 # 绘图
 plt.figure(figsize=(10, 5))
 plt.plot(dates, true[0], label='True Value')
 plt.plot(dates, pred[0], label='Prediction')
-plt.title('Prediction - AAPL (DLinear)')
+plt.title('Prediction - TSLA (DLinear)')
 plt.xlabel('Date')
 plt.ylabel('Value')
 plt.xticks(rotation=45)
