@@ -4,8 +4,8 @@ import os
 import pandas as pd
 
 # 确保结果文件存在
-pred_path = 'results/Dlinear-TSLA/pred.npy'
-true_path = 'results/Dlinear-TSLA/true.npy'
+pred_path = 'results/Dlinear-AAPL/pred.npy'
+true_path = 'results/Dlinear-AAPL/true.npy'
 
 if not os.path.exists(pred_path) or not os.path.exists(true_path):
     raise FileNotFoundError("预测文件或真实值文件不存在，请先运行模型生成结果。")
@@ -22,7 +22,7 @@ dates = pd.to_datetime(df['date'])[-len(true[0]):]  # 只取最后一段预测�
 plt.figure(figsize=(10, 5))
 plt.plot(dates, true[0], label='True Value')
 plt.plot(dates, pred[0], label='Prediction')
-plt.title('Prediction - TSLA (DLinear)')
+plt.title('Prediction - AAPL (DLinear)')
 plt.xlabel('Date')
 plt.ylabel('Value')
 plt.xticks(rotation=45)
