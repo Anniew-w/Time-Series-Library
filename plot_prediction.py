@@ -3,8 +3,8 @@ import matplotlib.pyplot as plt
 import os
 
 # 确保结果文件存在
-pred_path = 'results/long_term_forecast_DLinear_DLinear_custom_ftS_s196_ll48_pl24_dm64_nh8_el2_dl1_df2048_expand2_dc4_fc3_ebtimeF_dtTrue_Exp_DLinear_AAPL_0/pred.npy'
-true_path = 'results/long_term_forecast_DLinear_DLinear_custom_ftS_s196_ll48_pl24_dm64_nh8_el2_dl1_df2048_expand2_dc4_fc3_ebtimeF_dtTrue_Exp_DLinear_AAPL_0/true.npy'
+pred_path = 'results/long_term_forecast_DLinear/pred.npy'
+true_path = 'results/long_term_forecast_DLinear/true.npy'
 
 if not os.path.exists(pred_path) or not os.path.exists(true_path):
     raise FileNotFoundError("预测文件或真实值文件不存在，请先运行模型生成结果。")
