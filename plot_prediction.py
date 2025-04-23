@@ -15,7 +15,7 @@ pred = np.load(pred_path)
 true = np.load(true_path)
 
 # 加载 CSV 文件来提取时间戳（假设和 true.npy 是对齐的）
-df = pd.read_csv("data/AAPL/AAPL.csv")
+df = pd.read_csv("data/TSLA/TSLA.csv")
 df['date'] = pd.to_datetime(df['date'])
 
 # 从后 20% 作为 test 区间中提取预测区段
