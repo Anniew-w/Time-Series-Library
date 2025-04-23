@@ -20,6 +20,7 @@ dates = pd.to_datetime(df['date'])[-len(true[0]):]  # 只取最后一段预测�
 
 # 绘图
 plt.figure(figsize=(10, 5))
+plt.grid(True, which='both', axis='both', linestyle='--', linewidth=0.5)
 plt.plot(dates, true[0], label='True Value')
 plt.plot(dates, pred[0], label='Prediction')
 plt.title('Prediction vs True Value')
