@@ -10,9 +10,9 @@ Dlinear:
 		--data_path TSLA.csv \
 		--features S \
 		--target Close \
-		--seq_len 150 \
-		--label_len 60 \
-		--pred_len 60 \
+		--seq_len 96 \
+		--label_len 48 \
+		--pred_len 24 \
 		--e_layers 2 \
 		--d_layers 1 \
 		--factor 3 \
@@ -35,9 +35,9 @@ Transformer:
 		--data_path AAPL.csv \
 		--features S \
 		--target Close \
-		--seq_len 150 \
-		--label_len 60 \
-		--pred_len 60 \
+		--seq_len 96 \
+		--label_len 48 \
+		--pred_len 24 \
 		--e_layers 2 \
 		--d_layers 1 \
 		--factor 3 \
