@@ -4,8 +4,8 @@ import os
 import pandas as pd
 
 # 确保结果文件存在
-pred_path = 'results/Dlinear-TSLA/pred.npy'
-true_path = 'results/Dlinear-TSLA/true.npy'
+pred_path = 'results/Tran-TSLA/pred.npy'
+true_path = 'results/Tran-TSLA/true.npy'
 
 if not os.path.exists(pred_path) or not os.path.exists(true_path):
     raise FileNotFoundError("预测文件或真实值文件不存在，请先运行模型生成结果。")
