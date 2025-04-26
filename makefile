@@ -10,7 +10,7 @@ Dlinear:
 		--data_path TSLA.csv \
 		--features S \
 		--target Close \
-		--batchsize 128 \
+		--batch_size 128 \
 		--seq_len 96 \
 		--label_len 48 \
 		--pred_len 24 \
@@ -63,7 +63,7 @@ TimesNet_AAPL:
 		--data_path AAPL.csv \
 		--features S \
 		--target Close \
-		--batchsize 64 \
+		--batch_size 64 \
 		--seq_len 96 \
 		--label_len 48 \
 		--pred_len 24 \
@@ -90,7 +90,7 @@ TimesNet_TSLA:
 		--data_path TSLA.csv \
 		--features S \
 		--target Close \
-		--batchsize 64 \
+		--batch_size 64 \
 		--seq_len 96 \
 		--label_len 48 \
 		--pred_len 24 \
@@ -169,7 +169,7 @@ TimeXer_AAPL:
 		--data_path AAPL.csv \
 		--features S \
 		--target Close \
-		--batchsize 32 \
+		--batch_size 32 \
 		--seq_len 96 \
 		--label_len 48 \
 		--pred_len 24 \
@@ -196,7 +196,7 @@ TimeXer_TSLA:
 		--data_path TSLA.csv \
 		--features S \
 		--target Close \
-		--batchsize 32 \
+		--batch_size 32 \
 		--seq_len 96 \
 		--label_len 48 \
 		--pred_len 24 \
